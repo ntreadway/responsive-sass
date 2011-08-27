@@ -1,0 +1,59 @@
+Responsive Sass - Compass plugin
+====================
+
+Responsive Sass mixins currently supports background image resizing, killing mobile zoom and work in all modern browsers with pure CSS. Additional support 
+for Internet Explorer and older browsers is made possible with a small amount 
+of JavaScript using [Respond](http://github.com/scottjehl/Respond).
+
+
+Installation
+============
+
+From the command line:
+
+    gem install responsive-sass
+
+Add to a project:
+
+    // rails: your.scss
+    @import 'responsive-sass'
+
+    // command line
+    compass install responsive-sass
+    
+Or create a new project:
+
+    compass -r responsive-sass -f responsive-sass project_directory
+
+Mixins:
+======
+
+Note: Setting your images height is not required.
+
+* min-width-960
+
+    @include min-width-960($width, $height);
+
+* tablet-portrait
+
+   @include tablet-portrait($width, $height);
+   
+* tablet-landscape
+
+   @include tablet-landscape($width, $height);
+       
+* mobile-landscape
+
+   @include mobile-landscape($width, $height);
+   
+* mobile-portrait
+
+   @include mobile-portrait($width, $height);
+   
+* high-res
+
+   @include high-res($width, $height);
+   
+* kill-mobile-zoom
+
+  @include kill-mobile-zoom;
