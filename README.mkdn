@@ -28,7 +28,7 @@ Or create a new project:
 Mixins:
 ======
 
-Note: Setting your images height is not required.
+Note: Setting your elements height is not required.
 
 * min-width-960
 
@@ -36,24 +36,31 @@ Note: Setting your images height is not required.
 
 * tablet-portrait
 
-   @include tablet-portrait($width, $height);
+    @include tablet-portrait($width, $height);
    
 * tablet-landscape
 
-   @include tablet-landscape($width, $height);
+    @include tablet-landscape($width, $height);
        
 * mobile-landscape
 
-   @include mobile-landscape($width, $height);
+    @include mobile-landscape($width, $height);
    
 * mobile-portrait
 
-   @include mobile-portrait($width, $height);
+    @include mobile-portrait($width, $height);
    
 * high-res
 
-   @include high-res($width, $height);
+    @include high-res($width, $height);
    
 * kill-mobile-zoom
 
-  @include kill-mobile-zoom;
+    @include kill-mobile-zoom;
+    
+License:
+=======
+Copyright (c) 2011 Nick Treadway
+All Rights Reserved.
+
+Licensed under the [MIT license] (http://www.opensource.org/licenses/mit-license.php)
