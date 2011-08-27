@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Responsive::Sass::VERSION
   s.authors     = ["Nick Treadway"]
   s.email       = ["rnt@yeti-media.com"]
-  s.homepage    = "http:yeti-media.com"
+  s.homepage    = "http://github.com/ntreadway/responsive-sass"
   s.summary     = %q{Responsive Sass}
   s.description = %q{Responsive Sass design using media queries for Compass.}
 
