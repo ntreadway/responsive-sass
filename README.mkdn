@@ -31,6 +31,7 @@ Media Query Mixins:
 Note: Setting your elements height or background is not required.
 
 - Your can set your background image by passing your image url to the background variable. 
+    
     Example: @include high-res(960px, 400px, "/images/high-res.png");
 
 * min-width-960
@@ -65,6 +66,7 @@ Misc Mixins:
     @include kill-mobile-zoom;
     
 * kill-tap-highlight
+    
     @include kill-tap-highlight;
     
 License:
