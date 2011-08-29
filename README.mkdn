@@ -25,14 +25,17 @@ Or create a new project:
 
     compass -r responsive-sass -f responsive-sass project_directory
 
-Mixins:
-======
+Media Query Mixins:
+==================
 
-Note: Setting your elements height is not required.
+Note: Setting your elements height or background is not required.
+
+- Your can set your background image by passing your image url to the background variable. 
+    Example: @include high-res(960px, 400px, "/images/high-res.png");
 
 * min-width-960
 
-    @include min-width-960($width, $height);
+    @include min-width-960($width, $height, );
 
 * tablet-portrait
 
@@ -54,9 +57,15 @@ Note: Setting your elements height is not required.
 
     @include high-res($width, $height);
    
+Misc Mixins:
+===========
+
 * kill-mobile-zoom
 
     @include kill-mobile-zoom;
+    
+* kill-tap-highlight
+    @include kill-tap-highlight;
     
 License:
 =======

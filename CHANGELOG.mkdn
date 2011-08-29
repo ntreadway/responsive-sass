@@ -1,0 +1,6 @@
+# Responsive Sass Changelog
+
+## 0.0.2
+- Added ability to change your background image depending on size or devise resolution.
+- fixed issue with height being required.
+- Added mixin to kill webkit link highlighting
