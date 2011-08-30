@@ -31,32 +31,30 @@ Media Query Mixins:
 Note: Setting your elements height or background is not required.
 
 - Your can set your background image by passing your image url to the background variable. 
-    
-    Example: @include high-res(960px, 400px, "/images/high-res.png");
 
 * min-width-960
 
-    @include min-width-960($width, $height, );
+    @include min-width-960($width, $height, "/images/high-res.png");
 
 * tablet-portrait
 
-    @include tablet-portrait($width, $height);
+    @include tablet-portrait($width, $height, "/images/high-res.png");
    
 * tablet-landscape
 
-    @include tablet-landscape($width, $height);
+    @include tablet-landscape($width, $height, "/images/high-res.png");
        
 * mobile-landscape
 
-    @include mobile-landscape($width, $height);
+    @include mobile-landscape($width, $height, "/images/high-res.png");
    
 * mobile-portrait
 
-    @include mobile-portrait($width, $height);
+    @include mobile-portrait($width, $height, "/images/high-res.png");
    
 * high-res
 
-    @include high-res($width, $height);
+    @include high-res($width, $height, "/images/high-res.png");
    
 Misc Mixins:
 ===========
