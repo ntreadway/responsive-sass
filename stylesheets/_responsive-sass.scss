@@ -1,52 +1,61 @@
-@mixin reponsive-core($width, $height: auto, $background: false) {
+@import "partials/base";
+
+@mixin reponsive-core($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin) {
   height: $height;
   width: $width;
-  -webkit-background-size: $width auto;
-  -moz-background-size: $width auto;
-  background-size: $width auto !important;
+  font-size: $font-size;
+  margin: $margin;
   @if $background {
-    background-image: url($background) !important;
+    background-image: url($background);
+    -webkit-background-size: $width $height;
+    -moz-background-size: $width $height;
+    background-size: $width $height;
+  }
+  @if $display {
+    display: none;
   }
   
 }
 
-@mixin min-width-960($width, $height: auto, $background: false){
-    @media only screen and (min-width: 960px) {
-      @include reponsive-core($width, $height, $background);
+@mixin min-width-960($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin){
+    @media only screen and (min-width: 60em) {
+      @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
     }
 }
 
-@mixin tablet-portrait($width, $height: auto, $background: false) {
-   @media only screen and (min-width: 768px) and (max-width: 959px) {
-     @include reponsive-core($width, $height, $background);
+@mixin tablet-portrait($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin) {
+   @media only screen and (min-width: 48em) and (max-width: 59.938em) {
+     @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
    }
 }
 
-@mixin tablet-landscape($width, $height: auto, $background: false){
-  @media only screen and (min-width: 1024px) {
-    @include reponsive-core($width, $height, $background);
+@mixin tablet-landscape($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin){
+  @media only screen and (max-width: 65em) {
+    @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
   }
 }
 
-@mixin mobile-landscape($width, $height: auto, $background: false) {
-  @media only screen and (min-width: 480px) {
-    @include reponsive-core($width, $height, $background);
+@mixin mobile-landscape($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin) {
+  @media only screen and (min-width: 30em) {
+    @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
   }
 }
 
-@mixin mobile-portrait($width, $height: auto, $background: false) {
-  @media only screen and (max-width: 479px) {
-    @include reponsive-core($width, $height, $background);
+@mixin mobile-portrait($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin) {
+  @media only screen and (max-width: 29.938em) {
+    @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
   }
 }
 
-@mixin high-res($width, $height: auto, $background: false){
+
+// Misc mixins
+@mixin high-res($width, $height: auto, $background: false, $display: false, $font-size: $font-size, $margin: $margin){
 /* iPhone 4 and other high pixel ratio devices ----------- */
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min-device-pixel-ratio: 2) {
-    @include reponsive-core($width, $height, $background);
+    @include reponsive-core($width, $height, $background, $display: false, $font-size: $font-size, $margin: $margin);
   }
 }
 
@@ -57,4 +66,71 @@
 
 @mixin kill-tap-highlight {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/*If you wanted to add the equivalent of a 12px left padding to an h2 set at a font-size of 32px you could use it like this:
+h2 {
+  padding-left: calc-em(12px, 32px);
+}
+More info can be found here => http://thesassway.com/intermediate/responsive-web-design-part-1*/
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
+
+
+
+/*
+  Frameless                 http://framelessgrid.com/
+  by Joni Korpi             http://jonikorpi.com/
+  licensed under CC0        http://creativecommons.org/publicdomain/zero/1.0/
+  Modified by Nick Treadway http://twitter.com/nicktea
+*/
+
+
+//
+// Column-widths in a mixin, in ems
+//
+
+@mixin width ($cols:1) {
+  width: ($cols * ($column + $gutter) - $gutter) / $em;
+}
+
+
+/*
+  Margin, padding, and border resets
+  except for form elements
+*/
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+
+/*
+  An easy way to zoom your entire layout in or out (as long as it's set in ems).
+  Just change the media queries to activate them.
+  Assuming your base font-size is 16:
+  - the first one zooms out by a factor of (16-2)/16 = 0.875
+  - the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+
+@media screen and (max-width: 1px) {
+  body {
+    font-size: ($font-size - 2) / $em;
+  }
+}
+
+@media screen and (max-width: 1px) {
+  body {
+    font-size: ($font-size + 2) / $em;
+  }
 }

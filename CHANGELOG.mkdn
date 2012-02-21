@@ -1,6 +1,16 @@
 # Responsive Sass Changelog
 
+## 0.1.0
+- Mixins are now using em's
+- Added normalize.css a alternative for reset.
+- Added Frameless Grid to gem [FRAMELESS] (http://framelessgrid.com.)
+- Added the option to hide elements using display:none.
+- Added the option to change your font-size using $font-size.
+- Added the option to change your margins using $margin
+- Added em function to easy convert your pixels to ems [TheSassWay] (http://thesassway.com/intermediate/responsive-web-design-part-1)
+- Height on backgrounds can now be accessed using $height
+
 ## 0.0.2
 - Added ability to change your background image depending on size or devise resolution.
-- fixed issue with height being required.
+- Fixed issue with height being required.
 - Added mixin to kill webkit link highlighting

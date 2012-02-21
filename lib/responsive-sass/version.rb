@@ -1,5 +1,5 @@
-module Responsive
-  module Sass
-    VERSION = "0.0.2"
+module Compass
+  module Responsive
+    VERSION = "0.1.0"
   end
 end

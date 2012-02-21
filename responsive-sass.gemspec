@@ -4,7 +4,7 @@ require "responsive-sass/version"
 
 Gem::Specification.new do |s|
   s.name        = "responsive-sass"
-  s.version     = Responsive::Sass::VERSION
+  s.version     = Compass::Responsive::VERSION
   s.authors     = ["Nick Treadway"]
   s.email       = ["rnt@yeti-media.com"]
   s.homepage    = "http://github.com/ntreadway/responsive-sass"
