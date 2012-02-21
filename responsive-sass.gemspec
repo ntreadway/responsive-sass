@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Compass::Responsive::VERSION
   s.authors     = ["Nick Treadway"]
   s.email       = ["rnt@yeti-media.com"]
-  s.homepage    = "http://github.com/ntreadway/responsive-sass"
+  s.homepage    = "http://ntreadway.github.com/responsive-sass/welcome"
   s.summary     = %q{Responsive Sass}
   s.description = %q{Responsive Sass design using media queries for Compass.}
 
@@ -24,7 +24,4 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.6}
   s.add_development_dependency("rake")
   s.add_dependency("compass", [">= 0.11"])
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
 end
