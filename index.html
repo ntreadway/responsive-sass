@@ -1,1 +1,78 @@
-<html><head><meta http-equiv="refresh" content="0;welcome" /></head></html>
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
+    <title>Responsive Sass</title>
+    <link href='stylesheets/screen.css' rel='stylesheet' />
+    <script src='javascripts/jquery-1.7.1.min.js'></script>
+    <!--[if IE]>
+      <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header role='banner'>
+      <h1>
+        Responsive Sass
+        <small>version 0.1.0</small>
+      </h1>
+      <div class='links'>
+        <strong>
+          <a href='http://github.com/ntreadway/responsive-sass'>Download on GitHub</a>
+        </strong>
+      </div>
+    </header>
+    <article>
+      <section role='main'>
+        <header>
+          <h2>Use:</h2>
+        </header>
+        <p>Install (this gem currently requires the Compass gem)</p>
+        <pre>gem install responsive-sass</pre>
+        <p>Import Responsive Sass into your project.</p>
+        <pre>@import "responsive-sass";</pre>
+        <p>
+          This gems core provides standard @media queries
+          for you to easily make your project responsive.
+        </p>
+        <p>
+          Each mixin comes with these options:
+        </p>
+        <pre>width, height, background, display, font-size, margin</pre>
+        <p>Setup your element with the @media tag[s] needed for your view.</p>
+        <pre>section {@include mobile-portrait(20em, $margin: $section-margin-top auto);}</pre>
+        <p>You can the Frameless grid like this:</p>
+        <pre>section {@include mobile-portrait($col4);}</pre>
+        <p>Here is an example of how this site is using Responsive Sass:</p>
+        <pre>// Drying up my mixins using Sass @extend
+        section, footer {
+        &nbsp;@extend .mobile-portrait;
+        &nbsp;@extend .mobile-landscape;
+        }
+        // Classes to extend
+        .mobile-portrait {
+        &nbsp;@include mobile-portrait($cols4);
+        }                                
+        .mobile-landscape {
+        &nbsp;@include mobile-landscape($cols6);
+        }</pre>
+      </section>
+    </article>
+    <footer>
+      <small>
+        <p class='links footer'>
+          Responsive Sass © 2012
+          <a class="footer" href="http://twitter.com/nicktea">Nick Treadway</a>
+          and
+          <a class="footer" href="http://yeti-media.com">Yeti Media</a>
+          Licensed under the
+          <a class="footer" href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>
+          <br />
+          More info on the Frameless grid by Joni Korpi can found here:
+          <a class="footer" href="http://http://framelessgrid.com/">Frameless</a>
+        </p>
+      </small>
+    </footer>
+  </body>
+</html>
