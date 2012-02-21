@@ -88,7 +88,7 @@ Column-widths in variables, in ems
      $cols15: (15 * ($column + $gutter) - $gutter) / $em;
      $cols16: (16 * ($column + $gutter) - $gutter) / $em;
 
-Column-widths in a function, in ems
+Column-widths in a mixin, in ems
 
      @mixin width ($cols:1) {
        width: ($cols * ($column + $gutter) - $gutter) / $em;
