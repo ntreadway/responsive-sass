@@ -1,7 +1,7 @@
 Responsive Sass - Compass plugin
 ====================
 
-Responsive Sass mixins currently supports background image resizing, killing mobile zoom and works in all modern desktop/mobile browsers. Additional support 
+Responsive Sass mixins currently supports the Frameless grid, background image resizing, killing mobile zoom and works in all modern desktop/mobile browsers. Additional support 
 for Internet Explorer and older browsers is made possible with a small amount 
 of JavaScript using [Respond](http://github.com/scottjehl/Respond).
 
