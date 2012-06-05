@@ -22,11 +22,7 @@ Or create a new project:
 
     gem install compass
     gem install responsive-sass
-    compass create path_to_project
-
-* In your config.rb add
-
-        require "responsive-sass"
+    compass create -r responsive-sass path_to_project
 
 * Tell Compass to watch your files
 
