@@ -13,21 +13,35 @@ From the command line:
 
     gem install responsive-sass
 
-Add to a project:
+Add to a Rails project:
 
-    // rails: your.scss
+    // your.scss
     @import 'responsive-sass'
-
-    // command line
-    compass install responsive-sass
     
 Or create a new project:
 
-    compass -r responsive-sass -f responsive-sass project_directory
+    gem install compass
+    gem install responsive-sass
+    compass create path_to_project
+
+* In your config.rb add
+
+        require "responsive-sass"
+
+* Tell Compass to watch your files
+
+        compass watch path_to_project
+
+* In your screen.scss add
+
+        @import "responsive-sass";
+
+
     
 To use with the Serve Gem
-   //compass.config
-   require 'responsive-sass'
+
+     // compass.config
+     require 'responsive-sass'
 
 Media Query Mixins:
 ==================
